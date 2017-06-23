@@ -17,13 +17,26 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('index');
 
-Route::get('/home', 'AppointmentController@index')->name('index');
-//Route::get('appointments', 'AppointmentController@index');
+//Using route resource to include all the routes at once
+Route::resource('appointments', 'AppointmentController');
 
-Route::get('/_form', 'AppointmentController@create')->name('_form');
 
+//Route::get('/appointments', 'AppointmentController@index')->name('appointments');
+////Route::get('appointments', 'AppointmentController@index');
+//
+//Route::get('/appointments/create', 'AppointmentController@create');//pop an empty form
+//Route::post('/appointments', 'AppointmentController@store');//saving to the db
+//
 //Route::get('/Appointments/edit', 'AppointmentController@edit')->name('edit');
 
-//Route::resource('appointments', 'AppointmentController');
+
+//
+//
+//Route::get('/appointment/{id?}', 'AppointmentController@show');
+//
+//Route::get('/appointment/{id?}/edit', 'AppointmentController@edit');
+//Route::post('/appointment/{id?}/update', 'AppointmentController@update');
+//
+//Route::post('/appointment/{id?}/delete', 'AppointmentController@destroy');

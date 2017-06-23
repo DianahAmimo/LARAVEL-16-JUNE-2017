@@ -13,13 +13,14 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
     <style>
         html, body {
             background-color: linen;
             color: #636b6f;
-            font-family: 'Vibur', sans-serif;
+            font-family: 'Tangerine', sans-serif;
             font-weight: 100;
+            font-size: large;
             height: 100vh;
             margin: 0;
         }
@@ -79,6 +80,10 @@
                                 </ul>
                             </li>
                         @endif
+                    </ul>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="{{ url('appointments') }}">Appointments</a></li>
                     </ul>
                 </div>
             </div>

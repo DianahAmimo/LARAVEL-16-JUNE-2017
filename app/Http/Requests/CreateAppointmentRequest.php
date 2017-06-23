@@ -24,7 +24,10 @@ class CreateAppointmentRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required'
+            'username' => 'required',
+            'style' => 'required|min:3',
+            'saloonist' => 'required|string',
+            'date' => 'required',
         ];
     }
 }
